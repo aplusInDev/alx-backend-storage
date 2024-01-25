@@ -8,7 +8,8 @@ from functools import wraps
 
 
 def count_calls(method: Callable) -> Callable:
-    """Decorator that takes a single method Callable argument and returns a Callable"""
+    """Decorator that takes a single method Callable argument and
+    returns a Callable"""
 
     @wraps(method)
     def wrapper(self, *args, **kwds):
@@ -20,7 +21,8 @@ def count_calls(method: Callable) -> Callable:
 
 
 def call_history(method: Callable) -> Callable:
-    """Decorator to store the history of inputs and outputs for a particular function"""
+    """Decorator to store the history of inputs and outputs for a
+    particular function"""
 
     @wraps(method)
     def wrapper(self, *args, **kwds):
